@@ -18,6 +18,10 @@ public class Star : MonoBehaviour
         rb.velocity = transform.forward * TravelSpeed;
         direction = (Ship.instance.transform.position - transform.position).normalized;
     }
+    private void OnEnable()
+    {
+        initTime = Time.time;
+    }
 
     // Update is called once per frame
     void Update()
