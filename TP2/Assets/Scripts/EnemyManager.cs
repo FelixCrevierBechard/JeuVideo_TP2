@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] typeEnemies;
-    [SerializeField] float SpawnDelay = 3f;
+    [SerializeField] public GameObject[] typeEnemies;
+    [SerializeField] float SpawnDelay = 2f;
     float Delay;
     float width = 20f;
     float minXPos;
     float maxXPos;
+    public static EnemyManager instance;
     // Start is called before the first frame update
     void Start()
     {
         minXPos = -width / 2;
         maxXPos = width / 2;
         Delay = SpawnDelay;
+        if(instance == null)
+            instance = this;
     }
 
     // Update is called once per frame
@@ -29,6 +32,10 @@ public class EnemyManager : MonoBehaviour
             {
                 float xPos = Random.Range(minXPos, maxXPos);
                 newEnemy.transform.position = new Vector2(xPos, 7f);
+                foreach (Transform child in newEnemy.transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
                 newEnemy.SetActive(true);
             }
             Delay = SpawnDelay;

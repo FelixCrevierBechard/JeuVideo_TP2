@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2389022855620527341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1514640600900225621}
+  - component: {fileID: 3203457047006294283}
+  - component: {fileID: 4075326567625276945}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1514640600900225621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389022855620527341}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3203457047006294283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389022855620527341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5ee22c7dd6a4c428987ada78dc14a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeEnemies:
+  - {fileID: 4121812601125482598, guid: b228ace0bfc6b0d4eab20bfd235c260a, type: 3}
+  - {fileID: 2586822168977900104, guid: 1c2d1071c3c61094e9df5315a6ab0096, type: 3}
+  SpawnDelay: 3
+--- !u!114 &4075326567625276945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389022855620527341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b79f3c0df10c334f8db25a8f941ef60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectAPool:
+  - {fileID: 8350380563065361096, guid: cb7f415e27604324688a67e401cbe49e, type: 3}
+  - {fileID: 2867336669299191909, guid: 41461e10e0a7d9348b875519dbec8d26, type: 3}
+  - {fileID: 2586822168977900104, guid: 1c2d1071c3c61094e9df5315a6ab0096, type: 3}
+  - {fileID: 4121812601125482598, guid: b228ace0bfc6b0d4eab20bfd235c260a, type: 3}
+  numberAPool: 190000000f0000000500000005000000
