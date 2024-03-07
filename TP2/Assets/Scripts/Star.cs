@@ -13,9 +13,6 @@ public class Star : MonoBehaviour
     void Start()
     {
         initTime = Time.time;
-        if (rb == null)
-            rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.forward * TravelSpeed;
         direction = (Ship.instance.transform.position - transform.position).normalized;
     }
     private void OnEnable()

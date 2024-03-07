@@ -9,11 +9,12 @@ public class Ship : MonoBehaviour
 {
     Vector2 Direction = Vector2.zero;
     [SerializeField] float Vitesse = 1f;
-    [SerializeField] float FireRate = 5f;
+    [SerializeField] float FireRate = 8f;
     [SerializeField] GameObject Bullet;
     [SerializeField] Vector2 MuzzlePos = Vector2.zero;
     float Fired = 0;
     float BulletDelay = 0;
+    public int points = 0;
 
     public static Ship instance;
 

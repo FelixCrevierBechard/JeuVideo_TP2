@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UFO : MonoBehaviour
 {
-    [SerializeField] float Magnetude = 10f;
+    [SerializeField] float Magnetude = 0.006f;
     [SerializeField] float frequence = 10f;
     [SerializeField] float speed = 10f;
     float initTime;
-    [SerializeField] float MaxTravelTime = 3f;
+    [SerializeField] float MaxTravelTime = 2f;
     [SerializeField] float FiringDelay = 1f;
     float Delay;
     [SerializeField] GameObject Star;
@@ -55,4 +56,26 @@ public class UFO : MonoBehaviour
         transform.Translate(Vector2.left * Mathf.Sin(Time.time * frequence) * Magnetude);
         transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("UFO");
+        if (collision.gameObject.name == "Bullet")
+        {
+            gameObject.SetActive(false);
+            Ship.instance.points += 5;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+
+    }
+
+
 }
