@@ -4,6 +4,7 @@ using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Ship : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Ship : MonoBehaviour
     [SerializeField] float FireRate = 8f;
     [SerializeField] GameObject Bullet;
     [SerializeField] Vector2 MuzzlePos = Vector2.zero;
+    [SerializeField]float Life = 3;
     float Fired = 0;
     float BulletDelay = 0;
     public int points = 0;
@@ -32,21 +34,29 @@ public class Ship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Direction.normalized * Vitesse * Time.deltaTime, Space.World);
-
-        if (Fired > 0 && BulletDelay <= 0)
+        if (Life > 0)
         {
-            GameObject newBullet = ObjectPool.instance.getPooledObject(Bullet);
-            if(newBullet != null )
+            transform.Translate(Direction.normalized * Vitesse * Time.deltaTime, Space.World);
+
+            if (Fired > 0 && BulletDelay <= 0)
             {
-                newBullet.transform.position = (Vector2)transform.position + MuzzlePos;
-                newBullet.SetActive(true);
+                GameObject newBullet = ObjectPool.instance.getPooledObject(Bullet);
+                if (newBullet != null)
+                {
+                    newBullet.transform.position = (Vector2)transform.position + MuzzlePos;
+                    newBullet.SetActive(true);
+                }
+
+                BulletDelay = 1 / FireRate;
             }
-            
-            BulletDelay = 1 / FireRate;
+            else
+                BulletDelay -= Time.deltaTime;
         }
         else
-            BulletDelay -= Time.deltaTime;
+        {
+            SceneManager.LoadScene(1);
+        }
+
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -56,5 +66,12 @@ public class Ship : MonoBehaviour
     public void Fire(InputAction.CallbackContext context)
     {
         Fired = context.ReadValue<float>();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print($"vie avant{Life}");
+        if(collision.gameObject.name != "Bullet")
+            Life--;
+        print($"vie après{Life}");
     }
 }

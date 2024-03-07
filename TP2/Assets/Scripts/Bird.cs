@@ -19,7 +19,7 @@ public class Bird : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         print("bird");
-        if (collision.gameObject.name == "Bullet")
+        if (collision.gameObject.name == "Bullet"||collision.gameObject.name == "Ship")
         {
             gameObject.SetActive(false);
             Ship.instance.points += 2;

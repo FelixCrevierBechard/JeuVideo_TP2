@@ -60,7 +60,7 @@ public class UFO : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         print("UFO");
-        if (collision.gameObject.name == "Bullet")
+        if (collision.gameObject.name == "Bullet" || collision.gameObject.name == "Ship")
         {
             gameObject.SetActive(false);
             Ship.instance.points += 5;

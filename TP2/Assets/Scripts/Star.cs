@@ -13,7 +13,8 @@ public class Star : MonoBehaviour
     void Start()
     {
         initTime = Time.time;
-        direction = (Ship.instance.transform.position - transform.position).normalized;
+        if(Ship.instance != null)
+            direction = (Ship.instance.transform.position - transform.position).normalized;
     }
     private void OnEnable()
     {
@@ -26,5 +27,14 @@ public class Star : MonoBehaviour
         transform.Translate(direction * TravelSpeed * Time.deltaTime, Space.Self);
         if (Time.time > initTime + MaxTravelTime)
             gameObject.SetActive(false);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("star");
+        if (collision.gameObject.name == "Bullet" || collision.gameObject.name == "Ship")
+        {
+            gameObject.SetActive(false);
+            Ship.instance.points += 2;
+        }
     }
 }
