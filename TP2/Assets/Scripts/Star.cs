@@ -30,7 +30,6 @@ public class Star : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("star");
         if (collision.gameObject.name == "Bullet" || collision.gameObject.name == "Ship")
         {
             gameObject.SetActive(false);

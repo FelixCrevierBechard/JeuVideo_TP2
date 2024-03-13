@@ -100,10 +100,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Vitesse: 7
-  FireRate: 10
+  FireRate: 8
   Bullet: {fileID: 8350380563065361096, guid: cb7f415e27604324688a67e401cbe49e, type: 3}
-  MuzzlePos: {x: 0, y: 1}
+  MuzzlePos: {x: 0, y: 0}
   Life: 3
+  murDroite: 11
+  murGauche: -11
+  plafond: 5.5
+  sol: -5.5
+  nbAlienMort: 0
   points: 0
 --- !u!114 &1759852589624520403
 MonoBehaviour:

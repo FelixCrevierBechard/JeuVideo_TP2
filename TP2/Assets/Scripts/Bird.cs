@@ -18,23 +18,11 @@ public class Bird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("bird");
         if (collision.gameObject.name == "Bullet"||collision.gameObject.name == "Ship")
         {
             gameObject.SetActive(false);
             Ship.instance.points += 2;
+            Ship.instance.nbAlienMort += 1;
         }
     }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-
-    }
-
-
 }

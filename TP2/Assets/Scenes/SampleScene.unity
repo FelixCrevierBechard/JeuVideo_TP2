@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &455383540
+--- !u!1001 &9727753
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -133,23 +133,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2546146749390405932, guid: c494013bb85c8e44b8ecb09efeed3101, type: 3}
       propertyPath: m_Name
-      value: background
+      value: background (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4812034900702612031, guid: c494013bb85c8e44b8ecb09efeed3101, type: 3}
       propertyPath: m_Size.x
-      value: 19.919195
+      value: 22.019854
       objectReference: {fileID: 0}
     - target: {fileID: 4812034900702612031, guid: c494013bb85c8e44b8ecb09efeed3101, type: 3}
       propertyPath: m_Size.y
-      value: 10.124748
+      value: 10.659197
       objectReference: {fileID: 0}
     - target: {fileID: 6789173207398952670, guid: c494013bb85c8e44b8ecb09efeed3101, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5189873
+      value: 1.495298
       objectReference: {fileID: 0}
     - target: {fileID: 6789173207398952670, guid: c494013bb85c8e44b8ecb09efeed3101, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.401207
+      value: 5.455226
       objectReference: {fileID: 0}
     - target: {fileID: 6789173207398952670, guid: c494013bb85c8e44b8ecb09efeed3101, type: 3}
       propertyPath: m_LocalPosition.z
@@ -185,11 +185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7232062611807898156, guid: c494013bb85c8e44b8ecb09efeed3101, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6159
+      value: -1.5699
       objectReference: {fileID: 0}
     - target: {fileID: 7232062611807898156, guid: c494013bb85c8e44b8ecb09efeed3101, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.4481
+      value: -5.3308
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 740032224}
   - component: {fileID: 740032223}
   - component: {fileID: 740032225}
+  - component: {fileID: 740032226}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -323,7 +324,7 @@ MonoBehaviour:
   - {fileID: 4121812601125482598, guid: b228ace0bfc6b0d4eab20bfd235c260a, type: 3}
   - {fileID: 2586822168977900104, guid: 1c2d1071c3c61094e9df5315a6ab0096, type: 3}
   - {fileID: 2867336669299191909, guid: 41461e10e0a7d9348b875519dbec8d26, type: 3}
-  numberAPool: 1900000005000000050000000f000000
+  numberAPool: 6400000005000000050000000f000000
 --- !u!4 &740032224
 Transform:
   m_ObjectHideFlags: 0
@@ -355,6 +356,21 @@ MonoBehaviour:
   - {fileID: 4121812601125482598, guid: b228ace0bfc6b0d4eab20bfd235c260a, type: 3}
   - {fileID: 2586822168977900104, guid: 1c2d1071c3c61094e9df5315a6ab0096, type: 3}
   SpawnDelay: 1.5
+--- !u!114 &740032226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740032222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48bbfdd627da3cd40a396ad2de9fb394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bonus: {fileID: 6933709974585591394, guid: 1c15bb6bf0a3e6f4f9ecc029a5b528ec, type: 3}
+  mur: 11
+  plafond: 6
 --- !u!1 &1301532840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6480615040573616583, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
@@ -459,15 +475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
       propertyPath: Life
+      value: 305
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
+      propertyPath: bonus
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
-      propertyPath: FireRate
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
-      propertyPath: MuzzlePos.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6480615040573616583, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
       propertyPath: m_Name
@@ -489,4 +501,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1900526998}
   - {fileID: 740032224}
-  - {fileID: 455383540}
+  - {fileID: 9727753}
