@@ -12,35 +12,14 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         if(rb == null)
-            rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.forward * TravelSpeed;
+            rb = GetComponent<Rigidbody2D>(); //on lui donne un rigidbody en 2d
+        rb.velocity = transform.forward * TravelSpeed; //on change sa velocity
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up * TravelSpeed * Time.deltaTime, Space.Self);
+        transform.Translate(Vector2.up * TravelSpeed * Time.deltaTime, Space.Self); //déplace la balle
     }
-
-    private void FixedUpdate()
-    {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-
-    }
-
 
 }

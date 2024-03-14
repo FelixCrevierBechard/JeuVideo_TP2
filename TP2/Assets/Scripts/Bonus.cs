@@ -14,6 +14,7 @@ public class Bonus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //gère le spawn et la destruction des bonus avec le temps;
         if (transform.position.y > -6)
             transform.Translate(Vector2.down * speed * Time.deltaTime);
         else
@@ -23,9 +24,9 @@ public class Bonus : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Ship")
+        if (collision.gameObject.name == "Ship"|| collision.gameObject.name == "Bullet")
         {
-            print("bonus");
+            //gère la destruction du bonus et l'ajout du bonus au joueur ainsi des points
             Destroy(transform.gameObject);
             Ship.instance.points += 2;
             Ship.instance.bonus += 1;

@@ -99,10 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343bc454528d26f4f848c440d1d1f938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magnetude: 0.01
-  frequence: 3
-  speed: 5
-  MaxTravelTime: 3
+  Magnetude: 0.006
+  frequence: 10
+  speed: 10
+  amplitude: 15
+  MaxTravelTime: 2
   FiringDelay: 1
   Star: {fileID: 2867336669299191909, guid: 41461e10e0a7d9348b875519dbec8d26, type: 3}
 --- !u!70 &-642152605934593763

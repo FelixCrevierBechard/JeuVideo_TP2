@@ -23,6 +23,7 @@ public class Flock : MonoBehaviour
         transform.Translate(Vector2.down * speed * Time.deltaTime);
         if(Time.time > initTime + MaxTravelTime)
             gameObject.SetActive(false);
+        //s'occupe de désactiver les enemies après x nombre de seconde
     }
 
 }

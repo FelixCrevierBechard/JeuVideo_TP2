@@ -6,6 +6,6 @@ public class ChangeScene : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {
-        SceneManager.LoadScene(sceneID);
+        SceneManager.LoadScene(sceneID); //s'occupe de change de scène
     }
 }

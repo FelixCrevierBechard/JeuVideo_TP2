@@ -20,7 +20,10 @@ public class Bird : MonoBehaviour
     {
         if (collision.gameObject.name == "Bullet"||collision.gameObject.name == "Ship")
         {
+            //gère les collisions (voir descriptions UFO)
             gameObject.SetActive(false);
+            if (collision.gameObject.name == "Bullet")
+                collision.gameObject.SetActive(false);
             Ship.instance.points += 2;
             Ship.instance.nbAlienMort += 1;
         }

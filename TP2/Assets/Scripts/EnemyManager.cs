@@ -22,9 +22,9 @@ public class EnemyManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        if(Delay <= 0)
+        if(Delay <= 0) //s'occupe de faire spawn aléatoire et à une position aléatoire entre deux bornes un enemie a x nombre de temps
         {
             int i = Random.Range(0, typeEnemies.Length);
             GameObject newEnemy = ObjectPool.instance.getPooledObject(typeEnemies[i]);

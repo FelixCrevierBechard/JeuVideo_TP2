@@ -499,7 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
       propertyPath: nbAlienMort
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6480615040573616583, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
       propertyPath: m_Name

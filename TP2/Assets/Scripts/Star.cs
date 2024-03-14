@@ -6,7 +6,6 @@ public class Star : MonoBehaviour
 {
     [SerializeField] float MaxTravelTime = 10f;
     [SerializeField] float TravelSpeed = 10f;
-    Rigidbody2D rb;
     Vector3 direction;
     float initTime;
     // Start is called before the first frame update
@@ -33,6 +32,8 @@ public class Star : MonoBehaviour
         if (collision.gameObject.name == "Bullet" || collision.gameObject.name == "Ship")
         {
             gameObject.SetActive(false);
+            if (collision.gameObject.name == "Bullet")
+                collision.gameObject.SetActive(false);
             Ship.instance.points += 2;
         }
     }

@@ -23,7 +23,7 @@ public class Ship : MonoBehaviour
     float BulletDelay = 0;
     public int points = 0;
 
-    public static Ship instance;
+    public static Ship instance; //l'instance du vaiseau qui va nous permettre d'utiliser les bonus et autre dans les autres scripts
 
     private void Awake()
     {
@@ -38,7 +38,7 @@ public class Ship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bonus > 0)
+        if (bonus != 0)
         {
             if(transform.position.x + Direction.x < murDroite && transform.position.y + Direction.y < plafond&& transform.position.x + Direction.x > murGauche&& transform.position.y + Direction.y > sol)
                 transform.Translate(Direction.normalized * Vitesse * Time.deltaTime, Space.World);
@@ -48,6 +48,7 @@ public class Ship : MonoBehaviour
                 GameObject newBullet = ObjectPool.instance.getPooledObject(Bullet); ;
                 GameObject newBullet2;
                 GameObject newBullet3;
+                //nous fait spawn des balles à chaque click de souris
                 if (newBullet != null)
                 {
                     if(bonus == 1)
@@ -92,11 +93,11 @@ public class Ship : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        Direction = context.ReadValue<Vector2>();
+        Direction = context.ReadValue<Vector2>(); //s'occupe de gérer les touches pour bouger
     }
     public void Fire(InputAction.CallbackContext context)
     {
-        Fired = context.ReadValue<float>();
+        Fired = context.ReadValue<float>(); //s'occupe de gérer les touches pour tirer
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

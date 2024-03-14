@@ -19,7 +19,7 @@ public class TTD : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {//s'occupe de désactiver les enemis et balles après x nombre de seconde
         if(Time.time > initTime + MaxTravelTime)
             gameObject.SetActive(false);
     }

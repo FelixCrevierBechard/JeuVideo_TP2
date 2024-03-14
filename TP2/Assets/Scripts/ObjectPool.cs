@@ -18,7 +18,7 @@ public class ObjectPool : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start()
-    {
+    { //défini les objets dans l'objet pool
         for (int i = 0; i < Mathf.Min(objectAPool.Length, numberAPool.Length); i++)
             for (int j = 0; j < numberAPool[i]; j++)
             {
@@ -31,6 +31,7 @@ public class ObjectPool : MonoBehaviour
 
     public GameObject getPooledObject(GameObject typeObj)
     {
+        //prendre les objects dans l'object pools
         for(int i = 0; i < pool.Count; i++)
         {
             if(typeObj.name == pool[i].name && !pool[i].activeInHierarchy)

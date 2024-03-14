@@ -9,7 +9,7 @@ public class pointOfPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pointDuJoueur.text = $"Vos points acquis dans la partie : {Ship.instance.points}";
+        pointDuJoueur.text = $"Vos points acquis dans la partie : {Ship.instance.points}"; //s'assure d'afficher les points dans le menu de fin
     }
 
     // Update is called once per frame
