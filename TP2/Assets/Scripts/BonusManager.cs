@@ -13,7 +13,7 @@ public class BonusManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Ship.instance.nbAlienMort == 5)
+        if(Ship.instance.nbAlienMort >= 5)
         {
             GameObject.Instantiate(Bonus, new Vector3(UnityEngine.Random.Range(-mur, mur), plafond, 0), Quaternion.identity);
             //fait spawn un bonus a chaque 5 enemie mort

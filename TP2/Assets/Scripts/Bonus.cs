@@ -23,13 +23,12 @@ public class Bonus : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("bonus");
-        if (collision.gameObject.name == "Ship"|| collision.gameObject.name == "Bullet")
+        if (collision.gameObject.name == "Ship")
         {
+            print("bonus");
             Destroy(transform.gameObject);
             Ship.instance.points += 2;
-            if (Ship.instance.bonus < 3)
-                Ship.instance.bonus += 1;
+            Ship.instance.bonus += 1;
         }
     }
 }

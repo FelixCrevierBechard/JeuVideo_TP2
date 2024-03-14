@@ -474,12 +474,32 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
+      propertyPath: sol
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
       propertyPath: Life
       value: 305
       objectReference: {fileID: 0}
     - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
       propertyPath: bonus
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 8350380563065361096, guid: cb7f415e27604324688a67e401cbe49e, type: 3}
+    - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
+      propertyPath: Vitesse
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
+      propertyPath: plafond
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465879413178443772, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
+      propertyPath: nbAlienMort
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6480615040573616583, guid: 57da7eb80a8ece14fb1989b31b14a1cf, type: 3}
       propertyPath: m_Name
